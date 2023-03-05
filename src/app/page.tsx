@@ -26,11 +26,11 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
   return (
     <main
-      className={`bg-white px-10 md:px-20 lg:px-40 w-screen ${
-        roboto.className
-      } ${darkMode ? 'dark bg-gray-900' : ''}`}
+      className={`px-10 md:px-20 lg:px-40 ${roboto.className} ${
+        darkMode ? 'dark bg-gray-900' : ''
+      }`}
     >
-      <section className="min-h-screen dark:bg-gray-900">
+      <section className="min-h-scree">
         <nav className="py-10 flex justify-between">
           <h1 className="text-xl font-burtons dark:text-gray-200">ARZKY</h1>
           <ul className={`flex items-center ${roboto.className}`}>
