@@ -3,7 +3,7 @@ import { BsFillMoonStarsFill } from 'react-icons/bs'
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai'
 import { Roboto } from 'next/font/google'
 import Image from 'next/image'
-import deved from '../../public/dev-ed-wave.png'
+import deved from '../../public/avatar.png'
 import design from '../../public/design.png'
 import code from '../../public/code.png'
 import consulting from '../../public/consulting.png'
@@ -26,11 +26,11 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
   return (
     <main
-      className={`px-10 md:px-20 lg:px-40 ${roboto.className} ${
+      className={`px-10 h-screen md:px-20 lg:px-40 ${roboto.className} ${
         darkMode ? 'dark bg-gray-900' : ''
       }`}
     >
-      <section className="min-h-scree">
+      <section className="max-h-screen">
         <nav className="py-10 flex justify-between">
           <h1 className="text-xl font-burtons dark:text-gray-200">ARZKY</h1>
           <ul className={`flex items-center ${roboto.className}`}>
@@ -52,15 +52,14 @@ export default function Home() {
         </nav>
         <div className="text-center">
           <h2 className="text-4xl pb-4 text-teal-600 font-medium md:text-6xl">
-            Wahyu N. Arizky
+            Wahyu Nur Arizky
           </h2>
           <h3 className="text-lg md:text-3xl dark:text-gray-200">
             Software Developer
           </h3>
           <p className="text-base py-5 md:text-xl max-w-2xl mx-auto leading-8 text-gray-800 dark:text-gray-300">
-            I am a software developer with several experience. Desire to become
-            a professional who is constantly learning. I enjoy working
-            collaboratively but can also run with projects independently.
+            I am a software developer who desire to become a professional who is
+            constantly learning.
           </p>
         </div>
         <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
@@ -76,15 +75,15 @@ export default function Home() {
             <AiFillInstagram className="dark:text-gray-200" />
           </Link>
         </div>
-        <div className="relative bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mx-auto overflow-hidden">
+        <div className="relative bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mx-auto overflow-hidden">
           <Image
             src={deved}
             alt="myimage"
-            className="object-cover w-[100%] h-[100%]"
+            className="object-contain w-[100%] h-[100%]"
           />
         </div>
       </section>
-      <section>
+      {/* <section>
         <div>
           <h3 className="text-3xl py-1 dark:text-gray-200">Services I Offer</h3>
           <p className="text-base py-2 leading-8 text-gray-800 dark:text-gray-200">
@@ -217,7 +216,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   )
 }
